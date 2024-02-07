@@ -4,45 +4,45 @@ import "./index.css";
 
 const pizzaData = [
   {
-    name: "Focaccia",
+    name: "Naruto",
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,
-    photoName: "pizzas/focaccia.jpg",
+    photoName: "poster/naruto.jpg",
     soldOut: false,
   },
   {
-    name: "Pizza Margherita",
+    name: "One Piece",
     ingredients: "Tomato and mozarella",
     price: 10,
-    photoName: "pizzas/margherita.jpg",
+    photoName: "poster/onepiece.jpg",
     soldOut: false,
   },
   {
-    name: "Pizza Spinaci",
+    name: "Bleach",
     ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
     price: 12,
-    photoName: "pizzas/spinaci.jpg",
+    photoName: "poster/bleach.jpg",
     soldOut: false,
   },
   {
-    name: "Pizza Funghi",
+    name: "Baki",
     ingredients: "Tomato, mozarella, mushrooms, and onion",
     price: 12,
-    photoName: "pizzas/funghi.jpg",
+    photoName: "poster/baki.jpg",
     soldOut: false,
   },
   {
-    name: "Pizza Salamino",
+    name: "One Punch Man",
     ingredients: "Tomato, mozarella, and pepperoni",
     price: 15,
-    photoName: "pizzas/salamino.jpg",
-    soldOut: true,
+    photoName: "poster/onepunchman.jpg",
+    soldOut: false,
   },
   {
-    name: "Pizza Prosciutto",
+    name: "Dragon Ball",
     ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
     price: 18,
-    photoName: "pizzas/prosciutto.jpg",
+    photoName: "poster/dragonball.jpeg",
     soldOut: false,
   },
 ];
@@ -140,7 +140,7 @@ function Footer() {
         <p>
           {new Date().toLocaleDateString()}. We're currently {status}!
         </p>
-        <button className="btn">Order</button>
+        <button className="btn">Watch Anime</button>
       </div>
     </footer>
   );
