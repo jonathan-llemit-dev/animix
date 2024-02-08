@@ -80,15 +80,17 @@ function Menu() {
 
   return (
     <main className="menu">
-      <h2>Best Anime List</h2>
+      <div className="menu-title">
+        <h2>Best Anime List</h2>
+        <p>
+          Updated list of all popular anime with honest review and ratings from
+          all otaku world-wide.
+        </p>
+      </div>
       {numPizzas > 0 ? (
         // here we use react fragment. this serves as main element on jsx so that we can render multiple element
         // the fragment will not actually render on html it only handles the group of elements but does not affect the entire design
         <>
-          <p>
-            Updated list of all popular anime with honest review and ratings
-            from all otaku world-wide.
-          </p>
           <ul className="pizzas">
             {/* here we iterate each data on an object and used the data as props to render components for each data */}
             {pizzaData.map((pizza) => (
