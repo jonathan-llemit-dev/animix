@@ -18,11 +18,11 @@ body {
   border-bottom: 1.6rem solid #244ce9;
   min-height: 100vh;
   padding: 3.2rem;
-  padding-bottom: 6rem;
+  /* padding-bottom: 6rem; */
 }
 
 .container {
-  max-width: 80rem;
+  /* max-width: 80rem; */
   margin: 0 auto;
 
   display: flex;
@@ -34,13 +34,14 @@ body {
 /* *************** */
 
 .header {
-  align-self: stretch;
+  /* align-self: stretch; */
 }
 
 .header h1 {
   /* Non-accessible color */
   color: #252525;
-  /* color: #af8602; */
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
 
   text-transform: uppercase;
   text-align: center;
@@ -50,25 +51,6 @@ body {
   position: relative;
   width: 100%;
   display: block;
-}
-
-.header h1::before,
-.header h1::after {
-  display: block;
-  content: "";
-  height: 3px;
-  width: 4rem;
-  background-color: #252525;
-  position: absolute;
-  top: calc(50% - 1px);
-}
-
-.header h1::before {
-  left: 0;
-}
-
-.header h1::after {
-  right: 0;
 }
 
 /* *************** */
