@@ -133,6 +133,7 @@ body {
 }
 
 .pizza p {
+  display: flex;
   font-size: 1rem;
   font-weight: 300;
   font-style: italic;
@@ -142,6 +143,11 @@ body {
 .pizza span {
   display: block;
   font-size: 1rem;
+}
+
+.genre {
+  font-size: 1rem;
+  background-color: #5775ed;
 }
 
 .pizza.sold-out {

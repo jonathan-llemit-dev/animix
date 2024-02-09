@@ -129,7 +129,7 @@ function Pizza({ pizzaObj }) {
       <img src={pizzaObj.photoName} alt={pizzaObj.name} />
       <div>
         <h3>{pizzaObj.name}</h3>
-        <p>{pizzaObj.ingredients}</p>
+        <p>{pizzaObj.genres.map((genre) => genre)}</p>
         <span>{pizzaObj.soldOut ? "Sold Out" : pizzaObj.price}</span>
       </div>
     </li>
