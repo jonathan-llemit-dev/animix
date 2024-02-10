@@ -133,11 +133,11 @@ body {
 }
 
 .pizza p {
-  display: flex;
-  font-size: 1rem;
+  inline-size: 200px;
+  overflow-wrap: break-word;
+  /* font-size: 1rem; */
   font-weight: 300;
   font-style: italic;
-  margin-bottom: auto;
 }
 
 .pizza span {
