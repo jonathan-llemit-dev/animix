@@ -102,12 +102,12 @@ function Menu() {
           <ul className="pizzas">
             {/* here we iterate each data on an object and used the data as props to render components for each data */}
             {animeData.map((anime) => (
-              <Pizza pizzaObj={anime} key={anime.name} />
+              <Anime animeObj={anime} key={anime.name} />
             ))}
           </ul>
         </>
       ) : (
-        <p>We're still working on our menu. Please come back later</p>
+        <p>We're still working on our anime list. Please come back later</p>
       )}
     </main>
   );
@@ -116,15 +116,15 @@ function Menu() {
 // by destructuring props you can easily determine all the data that has been passed on component
 // in destructuring props the name of data that is being passed on component and the name of parameter here on component must be same
 // the name of data on destructured props must be inside {}
-function Pizza({ pizzaObj }) {
+function Anime({ animeObj }) {
   return (
     // setting classes conditionally using ternary operation and template literals
-    <li className={`pizza ${pizzaObj.soldOut && "sold-out"}`}>
-      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
+    <li className={`pizza ${animeObj.soldOut && "sold-out"}`}>
+      <img src={animeObj.photoName} alt={animeObj.name} />
       <div>
-        <h3>{pizzaObj.name}</h3>
-        <p>{pizzaObj.genres.map((genre) => genre)}</p>
-        <span>{pizzaObj.soldOut ? "Sold Out" : pizzaObj.price}</span>
+        <h3>{animeObj.name}</h3>
+        <p>{animeObj.genres.map((genre) => genre)}</p>
+        <span>{animeObj.soldOut ? "Sold Out" : animeObj.price}</span>
       </div>
     </li>
   );
