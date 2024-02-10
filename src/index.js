@@ -83,9 +83,8 @@ function Header() {
 }
 
 function Menu() {
-  const pizzas = animeData;
-  // const pizzas = [];
-  const numPizzas = pizzas.length;
+  const animes = animeData;
+  const numAnime = animes.length;
 
   return (
     <main className="menu">
@@ -96,14 +95,14 @@ function Menu() {
           all otaku world-wide.
         </p>
       </div>
-      {numPizzas > 0 ? (
+      {numAnime > 0 ? (
         // here we use react fragment. this serves as main element on jsx so that we can render multiple element
         // the fragment will not actually render on html it only handles the group of elements but does not affect the entire design
         <>
           <ul className="pizzas">
             {/* here we iterate each data on an object and used the data as props to render components for each data */}
-            {animeData.map((pizza) => (
-              <Pizza pizzaObj={pizza} key={pizza.name} />
+            {animeData.map((anime) => (
+              <Pizza pizzaObj={anime} key={anime.name} />
             ))}
           </ul>
         </>
