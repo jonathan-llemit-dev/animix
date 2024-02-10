@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-const pizzaData = [
+const animeData = [
   {
     name: "Naruto",
     genres: ["action", "adventure", "comedy", "drama", "shounen"],
@@ -76,19 +76,14 @@ function App() {
 // jsx simplifies making react components but if we want we can use pure js to generate a component
 function Header() {
   return (
-    // sample inline css
-    // <h1 style={{ color: "red", fontSize: "48px", textTransform: "uppercase" }}>
-    //   Fast React Pizza Co.
-    // </h1>
-
     <header className="header">
-      <h1 style={{}}>Animix</h1>
+      <h1>Animix</h1>
     </header>
   );
 }
 
 function Menu() {
-  const pizzas = pizzaData;
+  const pizzas = animeData;
   // const pizzas = [];
   const numPizzas = pizzas.length;
 
@@ -107,7 +102,7 @@ function Menu() {
         <>
           <ul className="pizzas">
             {/* here we iterate each data on an object and used the data as props to render components for each data */}
-            {pizzaData.map((pizza) => (
+            {animeData.map((pizza) => (
               <Pizza pizzaObj={pizza} key={pizza.name} />
             ))}
           </ul>
