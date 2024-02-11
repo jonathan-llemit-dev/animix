@@ -99,7 +99,7 @@ function Menu() {
         // here we use react fragment. this serves as main element on jsx so that we can render multiple element
         // the fragment will not actually render on html it only handles the group of elements but does not affect the entire design
         <>
-          <ul className="pizzas">
+          <ul className="animes">
             {/* here we iterate each data on an object and used the data as props to render components for each data */}
             {animeData.map((anime) => (
               <Anime animeObj={anime} key={anime.name} />
@@ -119,7 +119,7 @@ function Menu() {
 function Anime({ animeObj }) {
   return (
     // setting classes conditionally using ternary operation and template literals
-    <li className={`pizza ${animeObj.soldOut && "sold-out"}`}>
+    <li className={`anime ${animeObj.soldOut && "sold-out"}`}>
       <img src={animeObj.photoName} alt={animeObj.name} />
       <div>
         <h3>{animeObj.name}</h3>
