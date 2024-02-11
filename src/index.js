@@ -123,8 +123,12 @@ function Anime({ animeObj }) {
       <img src={animeObj.photoName} alt={animeObj.name} />
       <div>
         <h3>{animeObj.name}</h3>
-        <p>{animeObj.genres.map((genre) => genre)}</p>
-        <span>{animeObj.soldOut ? "Sold Out" : animeObj.price}</span>
+        <p>
+          {animeObj.genres.map((genre) => (
+            <p className="genre">{genre}</p>
+          ))}
+        </p>
+        {/* <span>{animeObj.soldOut ? "Sold Out" : animeObj.price}</span> */}
       </div>
     </li>
   );
