@@ -155,7 +155,7 @@ body {
 }
 
 .anime span {
-  display: block;
+  display: flex;
   font-size: 1rem;
 }
 
@@ -165,18 +165,22 @@ body {
 }
 
 .very-bad {
+  margin-left: 8px;
   background-color: #fe6159;
 }
 
 .bad {
+  margin-left: 8px;
   background-color: #feb159;
 }
 
 .good {
+  margin-left: 8px;
   background-color: #59d2fe;
 }
 
 .very-good {
+  margin-left: 8px;
   background-color: #59fe90;
 }
 
