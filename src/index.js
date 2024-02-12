@@ -6,7 +6,6 @@ const animeData = [
   {
     name: "Naruto",
     genres: ["action", "adventure", "comedy", "drama", "shounen"],
-    price: 6,
     photoName: "poster/naruto.jpg",
     rating: 7,
   },
@@ -20,44 +19,38 @@ const animeData = [
   {
     name: "Bleach",
     genres: ["action", "adventure", "comedy", "shounen"],
-    price: 2,
+    rating: 2,
     photoName: "poster/bleach.jpg",
-    rating: false,
   },
   {
     name: "Baki",
     genres: ["action", "adventure", "shounen"],
-    price: 8,
+    rating: 8,
     photoName: "poster/baki.jpg",
-    rating: false,
   },
   {
     name: "One Punch Man",
     genres: ["action", "adventure", "comedy"],
-    price: 7.6,
+    rating: 7.6,
     photoName: "poster/onepunchman.jpg",
-    rating: false,
   },
   {
     name: "Dragon Ball",
     genres: ["action", "adventure", "comedy", "shounen"],
-    price: 7.5,
+    rating: 7.5,
     photoName: "poster/dragonball.jpeg",
-    rating: false,
   },
   {
     name: "Death Note",
     genres: ["drama", "mystery", "psychological", "thriller"],
-    price: 8,
+    rating: 8,
     photoName: "poster/deathnote.jpg",
-    rating: false,
   },
   {
     name: "Code Geass",
     genres: ["action", "mystery", "psychological", "thriller"],
-    price: 9.8,
+    rating: 9.8,
     photoName: "poster/codegeass.jpg",
-    rating: false,
   },
 ];
 
@@ -116,11 +109,13 @@ function Anime({ animeObj }) {
       <div>
         <h3>{animeObj.name}</h3>
         <p>
-          {animeObj.genres.map((genre) => (
-            <p className="genre">{genre}</p>
+          {animeObj.genres.map((genre, index) => (
+            <span className="genre" key={index}>
+              {genre}
+            </span>
           ))}
         </p>
-        {/* <span>{animeObj.rating ? "Sold Out" : animeObj.price}</span> */}
+        <span>Rating: {animeObj.rating}</span>
       </div>
     </li>
   );
