@@ -166,21 +166,29 @@ body {
 
 .very-bad {
   margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #fe6159;
 }
 
 .bad {
   margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #feb159;
 }
 
 .good {
   margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #59d2fe;
 }
 
 .very-good {
   margin-left: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #59fe90;
 }
 
