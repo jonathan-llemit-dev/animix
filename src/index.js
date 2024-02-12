@@ -8,56 +8,56 @@ const animeData = [
     genres: ["action", "adventure", "comedy", "drama", "shounen"],
     price: 6,
     photoName: "poster/naruto.jpg",
-    soldOut: false,
+    rating: 7,
   },
   {
     name: "One Piece",
     genres: ["action", "adventure", "comedy", "drama", "shounen"],
     price: 10,
     photoName: "poster/onepiece.jpg",
-    soldOut: false,
+    rating: 5,
   },
   {
     name: "Bleach",
     genres: ["action", "adventure", "comedy", "shounen"],
-    price: 12,
+    price: 2,
     photoName: "poster/bleach.jpg",
-    soldOut: false,
+    rating: false,
   },
   {
     name: "Baki",
     genres: ["action", "adventure", "shounen"],
-    price: 12,
+    price: 8,
     photoName: "poster/baki.jpg",
-    soldOut: false,
+    rating: false,
   },
   {
     name: "One Punch Man",
     genres: ["action", "adventure", "comedy"],
-    price: 15,
+    price: 7.6,
     photoName: "poster/onepunchman.jpg",
-    soldOut: false,
+    rating: false,
   },
   {
     name: "Dragon Ball",
     genres: ["action", "adventure", "comedy", "shounen"],
-    price: 18,
+    price: 7.5,
     photoName: "poster/dragonball.jpeg",
-    soldOut: false,
+    rating: false,
   },
   {
     name: "Death Note",
     genres: ["drama", "mystery", "psychological", "thriller"],
-    price: 18,
+    price: 8,
     photoName: "poster/deathnote.jpg",
-    soldOut: false,
+    rating: false,
   },
   {
     name: "Code Geass",
     genres: ["action", "mystery", "psychological", "thriller"],
-    price: 18,
+    price: 9.8,
     photoName: "poster/codegeass.jpg",
-    soldOut: false,
+    rating: false,
   },
 ];
 
@@ -71,9 +71,6 @@ function App() {
   );
 }
 
-// we use jsx syntax to input some html and css inside js file and inside this js function
-// this jsx will be automatically converted into pure html and css using babel which is default on react
-// jsx simplifies making react components but if we want we can use pure js to generate a component
 function Header() {
   return (
     <header className="header">
@@ -96,8 +93,6 @@ function Menu() {
         </p>
       </div>
       {numAnime > 0 ? (
-        // here we use react fragment. this serves as main element on jsx so that we can render multiple element
-        // the fragment will not actually render on html it only handles the group of elements but does not affect the entire design
         <>
           <ul className="animes">
             {/* here we iterate each data on an object and used the data as props to render components for each data */}
@@ -113,13 +108,10 @@ function Menu() {
   );
 }
 
-// by destructuring props you can easily determine all the data that has been passed on component
-// in destructuring props the name of data that is being passed on component and the name of parameter here on component must be same
-// the name of data on destructured props must be inside {}
 function Anime({ animeObj }) {
   return (
     // setting classes conditionally using ternary operation and template literals
-    <li className={`anime ${animeObj.soldOut && "sold-out"}`}>
+    <li className={`anime`}>
       <img src={animeObj.photoName} alt={animeObj.name} />
       <div>
         <h3>{animeObj.name}</h3>
@@ -128,22 +120,18 @@ function Anime({ animeObj }) {
             <p className="genre">{genre}</p>
           ))}
         </p>
-        {/* <span>{animeObj.soldOut ? "Sold Out" : animeObj.price}</span> */}
+        {/* <span>{animeObj.rating ? "Sold Out" : animeObj.price}</span> */}
       </div>
     </li>
   );
 }
 
 function Footer() {
-  // this is a sample in making a certain html element to render using only pure js without jsx
-  // return React.createElement("footer", null, "We're currently open!");
-
   const currentHour = new Date().getHours();
   const openingHour = 8;
   const closingHour = 17;
   let status = "";
 
-  // you can add/make/call any logical operations inside components because its just like a normal js function
   currentHour >= openingHour && currentHour < closingHour
     ? (status = "open")
     : (status = "close");
