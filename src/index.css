@@ -164,6 +164,22 @@ body {
   background-color: #5775ed;
 }
 
+.very-bad {
+  background-color: #fe6159;
+}
+
+.bad {
+  background-color: #feb159;
+}
+
+.good {
+  background-color: #59d2fe;
+}
+
+.very-good {
+  background-color: #59fe90;
+}
+
 .anime.sold-out {
   color: #888;
 }

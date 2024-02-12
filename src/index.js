@@ -115,10 +115,23 @@ function Anime({ animeObj }) {
             </span>
           ))}
         </p>
-        <span>Rating: {animeObj.rating}</span>
+        <span>
+          Rating: {animeObj.rating} <span2></span2>
+        </span>
       </div>
     </li>
   );
+}
+
+function Rating(rating) {
+  <span
+    className={`genre ${rating <= 2.5 && "very-bad"}
+                      ${rating <= 5 && rating >= 2.6 && "bad"}
+                      ${rating <= 7.5 && rating >= 5.1 && "good"}
+                      ${rating <= 10 && rating >= 7.6 && "very-good"}`}
+  >
+    sample
+  </span>;
 }
 
 function Footer() {
