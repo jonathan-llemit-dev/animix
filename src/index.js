@@ -43,7 +43,7 @@ const animeData = [
   {
     name: "Death Note",
     genres: ["drama", "mystery", "psychological", "thriller"],
-    rating: 8,
+    rating: 4.2,
     photoName: "poster/deathnote.jpg",
   },
   {
