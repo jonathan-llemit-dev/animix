@@ -75,6 +75,8 @@ function Menu() {
   const animes = animeData;
   const numAnime = animes.length;
 
+  const [summary, setSummary] = useState("");
+
   return (
     <main className="menu">
       <div className="menu-title">
@@ -85,14 +87,12 @@ function Menu() {
         </p>
       </div>
       {numAnime > 0 ? (
-        <>
-          <ul className="animes">
-            {/* here we iterate each data on an object and used the data as props to render components for each data */}
-            {animeData.map((anime) => (
-              <Anime animeObj={anime} key={anime.name} />
-            ))}
-          </ul>
-        </>
+        <ul className="animes">
+          {/* here we iterate each data on an object and used the data as props to render components for each data */}
+          {animeData.map((anime) => (
+            <Anime animeObj={anime} key={anime.name} />
+          ))}
+        </ul>
       ) : (
         <p>We're still working on our anime list. Please come back later</p>
       )}
@@ -101,11 +101,11 @@ function Menu() {
 }
 
 function Anime({ animeObj }) {
-  const [summary, setSummary] = useState(0);
+  // const [summary, setSummary] = useState("");
 
   return (
     // setting classes conditionally using ternary operation and template literals
-    <li className={`anime`} onClick={setSummary(1)}>
+    <li className={`anime`}>
       <img src={animeObj.photoName} alt={animeObj.name} />
       <div>
         <h3>{animeObj.name}</h3>
