@@ -75,8 +75,6 @@ function Menu() {
   const animes = animeData;
   const numAnime = animes.length;
 
-  const [summary, setSummary] = useState(0);
-
   return (
     <main className="menu">
       <div className="menu-title">
@@ -103,9 +101,11 @@ function Menu() {
 }
 
 function Anime({ animeObj }) {
+  const [summary, setSummary] = useState(0);
+
   return (
     // setting classes conditionally using ternary operation and template literals
-    <li className={`anime`}>
+    <li className={`anime`} onClick={setSummary(1)}>
       <img src={animeObj.photoName} alt={animeObj.name} />
       <div>
         <h3>{animeObj.name}</h3>
