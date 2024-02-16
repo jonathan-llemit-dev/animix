@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
@@ -12,45 +12,44 @@ const animeData = [
   {
     name: "One Piece",
     genres: ["action", "adventure", "comedy", "drama", "shounen"],
-    price: 10,
     photoName: "poster/onepiece.jpg",
     rating: 5,
   },
   {
     name: "Bleach",
     genres: ["action", "adventure", "comedy", "shounen"],
-    rating: 2,
     photoName: "poster/bleach.jpg",
+    rating: 2,
   },
   {
     name: "Baki",
     genres: ["action", "adventure", "shounen"],
-    rating: 8,
     photoName: "poster/baki.jpg",
+    rating: 8,
   },
   {
     name: "One Punch Man",
     genres: ["action", "adventure", "comedy"],
-    rating: 7.6,
     photoName: "poster/onepunchman.jpg",
+    rating: 7.6,
   },
   {
     name: "Dragon Ball",
     genres: ["action", "adventure", "comedy", "shounen"],
-    rating: 7.5,
     photoName: "poster/dragonball.jpeg",
+    rating: 7.5,
   },
   {
     name: "Death Note",
     genres: ["drama", "mystery", "psychological", "thriller"],
-    rating: 4.2,
     photoName: "poster/deathnote.jpg",
+    rating: 4.2,
   },
   {
     name: "Code Geass",
     genres: ["action", "mystery", "psychological", "thriller"],
-    rating: 9.8,
     photoName: "poster/codegeass.jpg",
+    rating: 9.8,
   },
 ];
 
@@ -75,6 +74,8 @@ function Header() {
 function Menu() {
   const animes = animeData;
   const numAnime = animes.length;
+
+  const [summary, setSummary] = useState(0);
 
   return (
     <main className="menu">
