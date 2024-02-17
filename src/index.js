@@ -90,11 +90,16 @@ function Menu() {
         <ul className="animes">
           {/* here we iterate each data on an object and used the data as props to render components for each data */}
           {animeData.map((anime) => (
-            <li className={`anime`} onClick={(e) => setSummary(anime.name)}>
+            <li
+              className={`anime`}
+              onClick={(e) =>
+                setSummary(summary !== anime.name ? anime.name : "")
+              }
+            >
               {summary !== anime.name ? (
                 <Anime animeObj={anime} key={anime.name} />
               ) : (
-                <div>
+                <div onClick={(e) => setSummary("")}>
                   <h3>Summary of {anime.name}</h3>
                   <p>lorem..</p>
                 </div>
