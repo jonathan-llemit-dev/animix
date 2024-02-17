@@ -90,7 +90,16 @@ function Menu() {
         <ul className="animes">
           {/* here we iterate each data on an object and used the data as props to render components for each data */}
           {animeData.map((anime) => (
-            <Anime animeObj={anime} key={anime.name} />
+            <li className={`anime`} onClick={(e) => setSummary(anime.name)}>
+              {summary !== anime.name ? (
+                <Anime animeObj={anime} key={anime.name} />
+              ) : (
+                <div>
+                  <h3>Summary of {anime.name}</h3>
+                  <p>lorem..</p>
+                </div>
+              )}
+            </li>
           ))}
         </ul>
       ) : (
@@ -105,7 +114,8 @@ function Anime({ animeObj }) {
 
   return (
     // setting classes conditionally using ternary operation and template literals
-    <li className={`anime`}>
+    // <li className={`anime`}>
+    <>
       <img src={animeObj.photoName} alt={animeObj.name} />
       <div>
         <h3>{animeObj.name}</h3>
@@ -120,7 +130,8 @@ function Anime({ animeObj }) {
           Rating: {animeObj.rating} <Rating rating={animeObj.rating} />
         </span>
       </div>
-    </li>
+    </>
+    // </li>
   );
 }
 
