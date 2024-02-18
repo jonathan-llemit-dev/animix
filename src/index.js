@@ -70,10 +70,11 @@ const animeData = [
 ];
 
 function App() {
+  const [menu, setMenu] = useState(false);
   return (
     <div className="container">
       <Header />
-      <Menu />
+      {menu ? <Menu /> : <Form />}
       <Footer />
     </div>
   );
@@ -115,7 +116,7 @@ function Menu() {
               {summary !== anime.name ? (
                 <Anime animeObj={anime} key={anime.name} />
               ) : (
-                <div onClick={(e) => setSummary("")}>
+                <div>
                   <h3>Summary of {anime.name}</h3>
                   <p>{anime.summary}</p>
                 </div>
@@ -187,6 +188,14 @@ function Footer() {
         <button className="btn">Watch Anime</button>
       </div>
     </footer>
+  );
+}
+
+function Form() {
+  return (
+    <main>
+      <p>form</p>
+    </main>
   );
 }
 
