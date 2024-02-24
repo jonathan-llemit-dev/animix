@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { App } from "./App";
 
 const animeData = [
   {
@@ -69,26 +70,7 @@ const animeData = [
   },
 ];
 
-function App() {
-  const [menu, setMenu] = useState(false);
-  return (
-    <div className="container">
-      <Header />
-      {menu ? <Menu /> : <Form />}
-      <Footer />
-    </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="header">
-      <h1>Animix</h1>
-    </header>
-  );
-}
-
-function Menu() {
+export function Menu() {
   const animes = animeData;
   const numAnime = animes.length;
 
@@ -169,7 +151,7 @@ function Rating({ rating }) {
   );
 }
 
-function Footer() {
+export function Footer() {
   const currentHour = new Date().getHours();
   const openingHour = 8;
   const closingHour = 17;
@@ -191,7 +173,7 @@ function Footer() {
   );
 }
 
-function Form() {
+export function Form() {
   return (
     <main>
       <p>form</p>
