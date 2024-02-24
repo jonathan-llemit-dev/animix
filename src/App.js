@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, Footer } from ".";
+import { Form } from ".";
+import { Footer } from "./Footer";
 import { Menu } from "./Menu";
 import { Header } from "./Header";
 
