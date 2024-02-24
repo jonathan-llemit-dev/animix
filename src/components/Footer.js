@@ -17,7 +17,7 @@ export default function Footer({ onToggleForm, showForm }) {
           {new Date().toLocaleDateString()}. We're currently {status}!
         </p>
         <button className="btn" onClick={() => onToggleForm()}>
-          {}Watch Anime
+          {showForm ? "Main Menu" : "Add Anime"}
         </button>
       </div>
     </footer>
