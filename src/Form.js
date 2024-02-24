@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Form() {
+export default function Form() {
   return (
     <main>
       <p>form</p>

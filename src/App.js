@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { Form } from "./Form";
-import { Footer } from "./Footer";
-import { Menu } from "./Menu";
-import { Header } from "./Header";
+import Form from "./Form";
+import Footer from "./Footer";
+import Menu from "./Menu";
+import Header from "./Header";
 
 export default function App() {
-  const [menu, setMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="container">
       <Header />
-      {menu ? <Menu /> : <Form />}
+      {showMenu ? <Form /> : <Menu />}
       <Footer />
     </div>
   );

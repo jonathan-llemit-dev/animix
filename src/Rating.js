@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Rating({ rating }) {
+export default function Rating({ rating }) {
   return (
     <span
       className={`${rating <= 2.5 && "very-bad"}

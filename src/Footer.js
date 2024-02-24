@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Footer() {
+export default function Footer() {
   const currentHour = new Date().getHours();
   const openingHour = 8;
   const closingHour = 17;
