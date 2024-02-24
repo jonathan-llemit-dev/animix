@@ -5,11 +5,20 @@ import Menu from "./Menu";
 import Header from "./Header";
 
 export default function App() {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+
+  function handleToggleForm(showForm) {
+    setShowForm(!showForm);
+  }
+
   return (
     <div className="container">
       <Header />
-      {showMenu ? <Form /> : <Menu />}
+      {showForm ? (
+        <Form onToggleForm={handleToggleForm} />
+      ) : (
+        <Menu onToggleForm={handleToggleForm} />
+      )}
       <Footer />
     </div>
   );
