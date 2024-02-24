@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { animeData, Anime } from ".";
+import { animeData } from ".";
+import { Anime } from "./Anime";
 
-export function Menu() {
+export default function Menu() {
   const animes = animeData;
   const numAnime = animes.length;
 

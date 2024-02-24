@@ -3,7 +3,7 @@ import { Form, Footer } from ".";
 import { Menu } from "./Menu";
 import { Header } from "./Header";
 
-export function App() {
+export default function App() {
   const [menu, setMenu] = useState(false);
   return (
     <div className="container">

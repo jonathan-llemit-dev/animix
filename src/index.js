@@ -70,44 +70,6 @@ export const animeData = [
   },
 ];
 
-export function Anime({ animeObj }) {
-  return (
-    // setting classes conditionally using ternary operation and template literals
-    <>
-      <img src={animeObj.photoName} alt={animeObj.name} />
-      <div>
-        <h3>{animeObj.name}</h3>
-        <p>
-          {animeObj.genres.map((genre, index) => (
-            <span className="genre" key={index}>
-              {genre}
-            </span>
-          ))}
-        </p>
-        <span>
-          Rating: {animeObj.rating} <Rating rating={animeObj.rating} />
-        </span>
-      </div>
-    </>
-  );
-}
-
-function Rating({ rating }) {
-  return (
-    <span
-      className={`${rating <= 2.5 && "very-bad"}
-                    ${rating <= 5 && rating >= 2.6 && "bad"}
-                    ${rating <= 7.5 && rating >= 5.1 && "good"}
-                    ${rating <= 10 && rating >= 7.6 && "very-good"}`}
-    >
-      {rating <= 2.5 && "Very-bad"}
-      {rating <= 5 && rating >= 2.6 && "Bad"}
-      {rating <= 7.5 && rating >= 5.1 && "Good"}
-      {rating <= 10 && rating >= 7.6 && "Very-good"}
-    </span>
-  );
-}
-
 export function Footer() {
   const currentHour = new Date().getHours();
   const openingHour = 8;
