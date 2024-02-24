@@ -8,18 +8,14 @@ export default function App() {
   const [showForm, setShowForm] = useState(false);
 
   function handleToggleForm(showForm) {
-    setShowForm(!showForm);
+    setShowForm((showForm) => !showForm);
   }
 
   return (
     <div className="container">
       <Header />
-      {showForm ? (
-        <Form onToggleForm={handleToggleForm} />
-      ) : (
-        <Menu onToggleForm={handleToggleForm} />
-      )}
-      <Footer />
+      {showForm ? <Form /> : <Menu />}
+      <Footer onToggleForm={handleToggleForm} />
     </div>
   );
 }

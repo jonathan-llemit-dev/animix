@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer({ onToggleForm }) {
   const currentHour = new Date().getHours();
   const openingHour = 8;
   const closingHour = 17;
@@ -16,7 +16,9 @@ export default function Footer() {
         <p>
           {new Date().toLocaleDateString()}. We're currently {status}!
         </p>
-        <button className="btn">Watch Anime</button>
+        <button className="btn" onClick={() => onToggleForm()}>
+          Watch Anime
+        </button>
       </div>
     </footer>
   );
