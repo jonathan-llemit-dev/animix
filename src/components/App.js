@@ -15,7 +15,7 @@ export default function App() {
     <div className="container">
       <Header />
       {showForm ? <Form /> : <Menu />}
-      <Footer onToggleForm={handleToggleForm} />
+      <Footer onToggleForm={handleToggleForm} showForm={showForm} />
     </div>
   );
 }
