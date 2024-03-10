@@ -9,10 +9,17 @@ export default function Form() {
           Anyone can contribute to our community, submit a new list of anime.
         </p>
         <form>
-          <input type="text" name="title" />
-          <input type="text" name="genre" />
-          <input type="text" name="rating" />
-          <input type="text" name="summary" />
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" />
+
+          <label for="genre">Genre:</label>
+          <input type="text" id="genre" name="genre" />
+
+          <label for="rating">Rating:</label>
+          <input type="text" id="rating" name="rating" />
+
+          <label for="summary">Summary:</label>
+          <input type="text" id="summary" name="summary" />
         </form>
       </div>
     </main>
