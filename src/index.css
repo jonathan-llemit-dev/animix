@@ -53,7 +53,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .menu-title {
@@ -73,12 +73,14 @@ body {
 .menu form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #7c91e3;
+  padding: 20px;
+  gap: 1rem;
 }
 
 .menu form div {
   display: flex;
-  align-items: center;
+  font-size: 2rem;
 }
 
 .menu-title p {
