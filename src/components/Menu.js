@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Anime from "./Anime";
 
-export default function Menu({ animeList }) {
+export default function Menu({ animeList, onSetAnimeList }) {
   const animes = animeList;
   const numAnime = animes.length;
 
