@@ -78,10 +78,16 @@ export default function App() {
     setShowForm((showForm) => !showForm);
   }
 
+  const [animeList, setAnimeList] = useState(animeData);
+
+  function handleSetAnimeList(animeList) {
+    setAnimeList((animeList) => !animeList);
+  }
+
   return (
     <div className="container">
       <Header />
-      {showForm ? <Form /> : <Menu animeData={animeData} />}
+      {showForm ? <Form /> : <Menu animeList={animeList} />}
       <Footer onToggleForm={handleToggleForm} showForm={showForm} />
     </div>
   );

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Anime from "./Anime";
 
-export default function Menu({ animeData }) {
-  const animes = animeData;
+export default function Menu({ animeList }) {
+  const animes = animeList;
   const numAnime = animes.length;
 
   const [summary, setSummary] = useState("");
@@ -19,7 +19,7 @@ export default function Menu({ animeData }) {
       {numAnime > 0 ? (
         <ul className="animes">
           {/* here we iterate each data on an object and used the data as props to render components for each data */}
-          {animeData.map((anime) => (
+          {animes.map((anime) => (
             <li
               className={`anime`}
               onClick={(e) =>
