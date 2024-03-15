@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Form() {
+export default function Form({ animeList, onSetAnimeList }) {
+  const [title, setTitle] = useState("");
+  const [genre, setGenre] = useState("");
+  const [rating, setRating] = useState("");
+  const [summary, setSummary] = useState("");
+
   return (
     <main className="menu">
       <div className="menu-title">
