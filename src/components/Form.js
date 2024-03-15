@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function Form({ animeList, onSetAnimeList }) {
   const [title, setTitle] = useState("");
-  const [genre, setGenre] = useState("");
+  const [genre, setGenre] = useState([]);
   const [rating, setRating] = useState(0);
   const [summary, setSummary] = useState("");
 
@@ -11,11 +11,19 @@ export default function Form({ animeList, onSetAnimeList }) {
 
     if (!title || !genre || !rating || !summary) return;
 
-    const newAnime = { title, genre, rating, summary };
+    const arrayGenre = [genre];
+
+    const newAnime = {
+      name: title,
+      genres: arrayGenre,
+      photoName: "poster/naruto.jpg",
+      rating: rating,
+      summary: summary,
+    };
     onSetAnimeList(newAnime);
 
     setTitle("");
-    setGenre("");
+    setGenre([]);
     setRating(0);
     setSummary("");
   }
@@ -72,6 +80,7 @@ export default function Form({ animeList, onSetAnimeList }) {
             onChange={(e) => setSummary(e.target.value)}
           />
         </div>
+        <button>Add</button>
       </form>
     </main>
   );
