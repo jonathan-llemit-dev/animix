@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function Form({ animeList, onSetAnimeList }) {
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState("");
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState(0);
   const [summary, setSummary] = useState("");
 
   function handleSubmit(e) {
@@ -16,7 +16,7 @@ export default function Form({ animeList, onSetAnimeList }) {
 
     setTitle("");
     setGenre("");
-    setRating("");
+    setRating(0);
     setSummary("");
   }
 
@@ -28,25 +28,49 @@ export default function Form({ animeList, onSetAnimeList }) {
           Anyone can contribute to our community, submit a new list of anime.
         </p>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label for="title">Title:</label>
-          <input type="text" id="title" name="title" />
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
         </div>
 
         <div>
           <label for="genre">Genre:</label>
-          <input type="text" id="genre" name="genre" />
+          <input
+            type="text"
+            id="genre"
+            name="genre"
+            value={genre}
+            onChange={(e) => setGenre(e.target.value)}
+          />
         </div>
 
         <div>
           <label for="rating">Rating:</label>
-          <input type="text" id="rating" name="rating" />
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            value={rating}
+            onChange={(e) => setRating(Number(e.target.value))}
+          />
         </div>
 
         <div>
           <label for="summary">Summary:</label>
-          <input type="text" id="summary" name="summary" />
+          <input
+            type="text"
+            id="summary"
+            name="summary"
+            value={summary}
+            onChange={(e) => setSummary(e.target.value)}
+          />
         </div>
       </form>
     </main>
