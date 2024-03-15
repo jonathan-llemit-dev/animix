@@ -6,6 +6,20 @@ export default function Form({ animeList, onSetAnimeList }) {
   const [rating, setRating] = useState("");
   const [summary, setSummary] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!title || !genre || !rating || !summary) return;
+
+    const newAnime = { title, genre, rating, summary };
+    onSetAnimeList(newAnime);
+
+    setTitle("");
+    setGenre("");
+    setRating("");
+    setSummary("");
+  }
+
   return (
     <main className="menu">
       <div className="menu-title">
