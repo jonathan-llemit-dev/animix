@@ -80,8 +80,8 @@ export default function App() {
 
   const [animeList, setAnimeList] = useState(animeData);
 
-  function handleSetAnimeList(animeList) {
-    setAnimeList((animeList) => !animeList);
+  function handleSetAnimeList(newAnime) {
+    setAnimeList((animeList) => [...animeList, newAnime]);
   }
 
   return (
