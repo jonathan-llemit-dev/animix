@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Form({ animeList, onSetAnimeList }) {
+export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState([]);
   const [rating, setRating] = useState(0);
@@ -26,6 +26,7 @@ export default function Form({ animeList, onSetAnimeList }) {
     setGenre([]);
     setRating(0);
     setSummary("");
+    onToggleForm();
   }
 
   return (

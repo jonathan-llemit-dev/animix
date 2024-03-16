@@ -88,7 +88,11 @@ export default function App() {
     <div className="container">
       <Header />
       {showForm ? (
-        <Form animeList={animeList} onSetAnimeList={handleSetAnimeList} />
+        <Form
+          animeList={animeList}
+          onSetAnimeList={handleSetAnimeList}
+          onToggleForm={handleToggleForm}
+        />
       ) : (
         <Menu animeList={animeList} onSetAnimeList={handleSetAnimeList} />
       )}
