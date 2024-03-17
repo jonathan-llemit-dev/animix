@@ -81,7 +81,7 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
             onChange={(e) => setSummary(e.target.value)}
           />
         </div>
-        <button>Add</button>
+        <button className="btn-add">Add</button>
       </form>
     </main>
   );

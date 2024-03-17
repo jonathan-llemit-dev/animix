@@ -248,3 +248,19 @@ body {
 .btn:hover {
   background-color: #758ef3;
 }
+
+.btn-add {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #4968e1;
+  padding: 1.4rem 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #627ce3;
+}
