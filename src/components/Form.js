@@ -11,7 +11,7 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
 
     if (!title || !genre || !rating || !summary) return;
 
-    const arrayGenre = [genre];
+    const arrayGenre = genre.split(",").map((genre) => genre.trim());
 
     const newAnime = {
       name: title,
