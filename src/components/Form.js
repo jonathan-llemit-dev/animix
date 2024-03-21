@@ -29,6 +29,14 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
     onToggleForm();
   }
 
+  const handleInputGenre = (e) => {
+    const value = e.target.value;
+    // Check if the value contains only letters
+    if (/^[a-zA-Z]*$/.test(value) || value === "") {
+      setGenre(value);
+    }
+  };
+
   return (
     <main className="menu">
       <div className="menu-title">
@@ -56,7 +64,7 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
             id="genre"
             name="genre"
             value={genre}
-            onChange={(e) => setGenre(e.target.value)}
+            onChange={handleInputGenre}
           />
         </div>
 
