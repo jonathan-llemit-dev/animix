@@ -79,7 +79,7 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
         <div>
           <label for="rating">Rating:</label>
           <input
-            type="number"
+            type="text"
             id="rating"
             name="rating"
             value={rating}
