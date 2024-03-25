@@ -37,6 +37,14 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
     }
   };
 
+  const handleInputRating = (e) => {
+    const value = e.target.value;
+    // Check if the value contains only letters
+    if (/^[0-9]*$/.test(value) || value === 0) {
+      setRating(value);
+    }
+  };
+
   return (
     <main className="menu">
       <div className="menu-title">
@@ -75,7 +83,7 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
             id="rating"
             name="rating"
             value={rating}
-            onChange={(e) => setRating(Number(e.target.value))}
+            onChange={handleInputRating}
           />
         </div>
 
