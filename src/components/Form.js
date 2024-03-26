@@ -89,13 +89,15 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
 
         <div>
           <label for="summary">Summary:</label>
-          <input
-            type="text"
+          <textarea
+            rows="4"
+            cols="50"
             id="summary"
             name="summary"
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
-          />
+            placeholder="Enter summary..."
+          ></textarea>
         </div>
         <button className="btn-add">Add</button>
       </form>
