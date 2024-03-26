@@ -32,7 +32,7 @@ export default function Form({ animeList, onSetAnimeList, onToggleForm }) {
   const handleInputGenre = (e) => {
     const value = e.target.value;
     // Check if the value contains only letters
-    if (/^[a-zA-Z]*$/.test(value) || value === "") {
+    if (/^[a-zA-Z ,]*$/.test(value) || value === "") {
       setGenre(value);
     }
   };
